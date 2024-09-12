@@ -35,7 +35,7 @@ namespace piedra_papel_tijera
         public int Difi()
         {
             //fija el modo de juego 0=facil 1=normal 2=dificil
-            int modo = 2;
+            int modo = 1;
             return modo;
 
         }
@@ -47,8 +47,8 @@ namespace piedra_papel_tijera
             Button tempButton = sender as Button;
             playerChoice = (string)tempButton.Tag;
 
-            //elije dificultad  0=normal   1=Facil 2=dificil
-            /*if (Difi() == 1) 
+            //selecciona el modo de juego 0=facil 1=normal 2=dificil
+            /*if (Difi() == 0) 
             {
                 int i = random.Next(0, Facil.Length);
                 computerChoice = Facil[i];
@@ -67,16 +67,19 @@ namespace piedra_papel_tijera
             switch (Difi())
             {
                 case 0:
-                    i = random.Next(0, Options.Length);
-                    computerChoice = Options[i];
-                    break;
-                case 1:
                     i = random.Next(0, Facil.Length);
                     computerChoice = Facil[i];
+                    lblModo.Text = "F";
+                    break;
+                case 1:
+                    i = random.Next(0, Options.Length);
+                    computerChoice = Options[i];
+                    lblModo.Text = "N";
                     break;
                 case 2:
                     i = random.Next(0, Hard.Length);
                     computerChoice = Hard[i];
+                    lblModo.Text = "H";
                     break;
 
             }

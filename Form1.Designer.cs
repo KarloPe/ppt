@@ -39,6 +39,7 @@
             lblCPUresult = new Label();
             CPU_CARA = new PictureBox();
             HUM_CARA = new PictureBox();
+            lblModo = new Label();
             ((System.ComponentModel.ISupportInitialize)CPU_PIC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PLAYER_PIC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CPU_CARA).BeginInit();
@@ -163,12 +164,27 @@
             HUM_CARA.TabIndex = 10;
             HUM_CARA.TabStop = false;
             // 
+            // lblModo
+            // 
+            lblModo.AutoSize = true;
+            lblModo.BackColor = Color.Transparent;
+            lblModo.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblModo.ForeColor = SystemColors.MenuHighlight;
+            lblModo.Location = new Point(12, 606);
+            lblModo.Name = "lblModo";
+            lblModo.RightToLeft = RightToLeft.Yes;
+            lblModo.Size = new Size(20, 17);
+            lblModo.TabIndex = 11;
+            lblModo.Text = "M";
+            lblModo.TextAlign = ContentAlignment.TopRight;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(800, 632);
+            Controls.Add(lblModo);
             Controls.Add(HUM_CARA);
             Controls.Add(CPU_CARA);
             Controls.Add(lblCPUresult);
@@ -203,5 +219,6 @@
         private Label lblCPUresult;
         private PictureBox CPU_CARA;
         private PictureBox HUM_CARA;
+        private Label lblModo;
     }
 }
