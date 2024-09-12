@@ -48,7 +48,7 @@
             // btnRock
             // 
             btnRock.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
-            btnRock.Location = new Point(86, 375);
+            btnRock.Location = new Point(69, 538);
             btnRock.Name = "btnRock";
             btnRock.Size = new Size(147, 63);
             btnRock.TabIndex = 0;
@@ -60,7 +60,7 @@
             // btnPaper
             // 
             btnPaper.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
-            btnPaper.Location = new Point(325, 375);
+            btnPaper.Location = new Point(330, 538);
             btnPaper.Name = "btnPaper";
             btnPaper.Size = new Size(147, 63);
             btnPaper.TabIndex = 1;
@@ -72,7 +72,7 @@
             // btnScissors
             // 
             btnScissors.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
-            btnScissors.Location = new Point(583, 375);
+            btnScissors.Location = new Point(588, 538);
             btnScissors.Name = "btnScissors";
             btnScissors.Size = new Size(147, 63);
             btnScissors.TabIndex = 2;
@@ -84,7 +84,7 @@
             // CPU_PIC
             // 
             CPU_PIC.BackColor = Color.Transparent;
-            CPU_PIC.Location = new Point(350, 53);
+            CPU_PIC.Location = new Point(350, 68);
             CPU_PIC.Name = "CPU_PIC";
             CPU_PIC.Size = new Size(99, 99);
             CPU_PIC.SizeMode = PictureBoxSizeMode.Zoom;
@@ -94,7 +94,7 @@
             // PLAYER_PIC
             // 
             PLAYER_PIC.BackColor = Color.Transparent;
-            PLAYER_PIC.Location = new Point(350, 211);
+            PLAYER_PIC.Location = new Point(350, 330);
             PLAYER_PIC.Name = "PLAYER_PIC";
             PLAYER_PIC.Size = new Size(99, 99);
             PLAYER_PIC.SizeMode = PictureBoxSizeMode.Zoom;
@@ -115,7 +115,7 @@
             // 
             lblPlayerchoice.AutoSize = true;
             lblPlayerchoice.Font = new Font("Segoe UI Semibold", 12.3076925F, FontStyle.Bold);
-            lblPlayerchoice.Location = new Point(289, 324);
+            lblPlayerchoice.Location = new Point(294, 465);
             lblPlayerchoice.Name = "lblPlayerchoice";
             lblPlayerchoice.Size = new Size(204, 30);
             lblPlayerchoice.TabIndex = 6;
@@ -125,17 +125,19 @@
             // 
             lblPlayerresult.AutoSize = true;
             lblPlayerresult.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblPlayerresult.Location = new Point(40, 156);
+            lblPlayerresult.Location = new Point(42, 226);
             lblPlayerresult.Name = "lblPlayerresult";
+            lblPlayerresult.RightToLeft = RightToLeft.Yes;
             lblPlayerresult.Size = new Size(194, 23);
             lblPlayerresult.TabIndex = 7;
             lblPlayerresult.Text = "Resultados del Humano";
+            lblPlayerresult.TextAlign = ContentAlignment.TopRight;
             // 
             // lblCPUresult
             // 
             lblCPUresult.AutoSize = true;
             lblCPUresult.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblCPUresult.Location = new Point(583, 211);
+            lblCPUresult.Location = new Point(583, 226);
             lblCPUresult.Name = "lblCPUresult";
             lblCPUresult.Size = new Size(197, 23);
             lblCPUresult.TabIndex = 8;
@@ -144,7 +146,7 @@
             // CPU_CARA
             // 
             CPU_CARA.BackColor = Color.Transparent;
-            CPU_CARA.Location = new Point(583, 53);
+            CPU_CARA.Location = new Point(583, 68);
             CPU_CARA.Name = "CPU_CARA";
             CPU_CARA.Size = new Size(152, 143);
             CPU_CARA.SizeMode = PictureBoxSizeMode.Zoom;
@@ -154,7 +156,7 @@
             // HUM_CARA
             // 
             HUM_CARA.BackColor = Color.Transparent;
-            HUM_CARA.Location = new Point(81, 211);
+            HUM_CARA.Location = new Point(84, 286);
             HUM_CARA.Name = "HUM_CARA";
             HUM_CARA.Size = new Size(152, 143);
             HUM_CARA.SizeMode = PictureBoxSizeMode.Zoom;
@@ -166,7 +168,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 632);
             Controls.Add(HUM_CARA);
             Controls.Add(CPU_CARA);
             Controls.Add(lblCPUresult);

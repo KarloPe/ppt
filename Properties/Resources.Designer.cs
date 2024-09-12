@@ -73,6 +73,16 @@ namespace piedra_papel_tijera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap humempata1 {
+            get {
+                object obj = ResourceManager.GetObject("humempata1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap humgana {
             get {
                 object obj = ResourceManager.GetObject("humgana", resourceCulture);
@@ -83,9 +93,29 @@ namespace piedra_papel_tijera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap humgana1 {
+            get {
+                object obj = ResourceManager.GetObject("humgana1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap humpierde {
             get {
                 object obj = ResourceManager.GetObject("humpierde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap humpierde1 {
+            get {
+                object obj = ResourceManager.GetObject("humpierde1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

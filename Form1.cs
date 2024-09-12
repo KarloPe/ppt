@@ -15,9 +15,11 @@ namespace piedra_papel_tijera
 
         string playerChoice;
         string computerChoice;
-        string[] Options = { "R", "P", "S", "R", "P", "S", "R", "P", "S" };
-        //modo facil mas chance de ganar con piedra
-        string[] Facil = { "R", "P", "S", "R", "S", "R", "S" };
+        string[] Options = { "R", "P", "R", "S", "P", "S", "R", "S", "P", "R", "P", "S" };
+        //modo facil gana o empata PIEDRA
+        string[] Facil = { "R", "S", "R", "S"};
+        //modo hard perdes con piedra
+        string[] Hard = { "P", "P", "R", "P", "P", "P", "S" };
 
         Random random = new Random();
         int computerScore;
@@ -30,16 +32,62 @@ namespace piedra_papel_tijera
             InitializeComponent();
         }
 
+        public int Difi()
+        {
+            //fija el modo de juego 0=facil 1=normal 2=dificil
+            int modo = 2;
+            return modo;
 
+        }
 
         private void MakeChoiceEvent(object sender, EventArgs e)
         {
+            int i;
+
             Button tempButton = sender as Button;
             playerChoice = (string)tempButton.Tag;
+
+            //elije dificultad  0=normal   1=Facil 2=dificil
+            /*if (Difi() == 1) 
+            {
+                int i = random.Next(0, Facil.Length);
+                computerChoice = Facil[i];
+            }
+            else if (Difi()==2)
+            {
+                int i = random.Next(0, Hard.Length);
+                computerChoice = Hard[i];
+            }
+            else
+            {
+                int i = random.Next(0, Options.Length);
+                computerChoice = Options[i];
+            }*/
+
+            switch (Difi())
+            {
+                case 0:
+                    i = random.Next(0, Options.Length);
+                    computerChoice = Options[i];
+                    break;
+                case 1:
+                    i = random.Next(0, Facil.Length);
+                    computerChoice = Facil[i];
+                    break;
+                case 2:
+                    i = random.Next(0, Hard.Length);
+                    computerChoice = Hard[i];
+                    break;
+
+            }
+            
+
+
             //int i = random.Next(0, Options.Length);
             //computerChoice = Options[i];
-            int i = random.Next(0, Facil.Length);
-            computerChoice = Facil[i];
+            ///int i = random.Next(0, Facil.Length);
+            ////computerChoice = Facil[i];
+
             lblPlayerchoice.Text = "Humano juega: " + UpdateTextandImage(playerChoice, PLAYER_PIC);
             lblCPUchoice.Text = "Compu juega: " + UpdateTextandImage(computerChoice, CPU_PIC);
             CheckGame();
@@ -78,7 +126,7 @@ namespace piedra_papel_tijera
                 draw = "- Empate -";
                 //poner carita
                 pic.Image = Properties.Resources.maria;
-                pih.Image = Properties.Resources.humempata;
+                pih.Image = Properties.Resources.humempata1;
 
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine + draw;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine + draw;
@@ -90,7 +138,7 @@ namespace piedra_papel_tijera
                 draw = "* Punto para Compu";
                 //poner carita
                 pic.Image = Properties.Resources.mariagana;
-                pih.Image = Properties.Resources.humpierde;
+                pih.Image = Properties.Resources.humpierde1;
 
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine + draw;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine ;
@@ -103,7 +151,7 @@ namespace piedra_papel_tijera
                 draw = "* Punto para Humano";
                 //poner carita
                 pic.Image = Properties.Resources.mariapierde;
-                pih.Image = Properties.Resources.humgana;
+                pih.Image = Properties.Resources.humgana1;
 
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine ;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine + draw;
