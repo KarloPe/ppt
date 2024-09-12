@@ -37,13 +37,17 @@
             lblPlayerchoice = new Label();
             lblPlayerresult = new Label();
             lblCPUresult = new Label();
+            CPU_CARA = new PictureBox();
+            HUM_CARA = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)CPU_PIC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PLAYER_PIC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CPU_CARA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HUM_CARA).BeginInit();
             SuspendLayout();
             // 
             // btnRock
             // 
-            btnRock.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRock.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
             btnRock.Location = new Point(86, 375);
             btnRock.Name = "btnRock";
             btnRock.Size = new Size(147, 63);
@@ -55,8 +59,8 @@
             // 
             // btnPaper
             // 
-            btnPaper.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPaper.Location = new Point(323, 375);
+            btnPaper.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
+            btnPaper.Location = new Point(325, 375);
             btnPaper.Name = "btnPaper";
             btnPaper.Size = new Size(147, 63);
             btnPaper.TabIndex = 1;
@@ -67,7 +71,7 @@
             // 
             // btnScissors
             // 
-            btnScissors.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold, GraphicsUnit.Point);
+            btnScissors.Font = new Font("Segoe UI", 12.3076925F, FontStyle.Bold);
             btnScissors.Location = new Point(583, 375);
             btnScissors.Name = "btnScissors";
             btnScissors.Size = new Size(147, 63);
@@ -80,7 +84,7 @@
             // CPU_PIC
             // 
             CPU_PIC.BackColor = Color.Transparent;
-            CPU_PIC.Location = new Point(341, 53);
+            CPU_PIC.Location = new Point(350, 53);
             CPU_PIC.Name = "CPU_PIC";
             CPU_PIC.Size = new Size(99, 99);
             CPU_PIC.SizeMode = PictureBoxSizeMode.Zoom;
@@ -90,7 +94,7 @@
             // PLAYER_PIC
             // 
             PLAYER_PIC.BackColor = Color.Transparent;
-            PLAYER_PIC.Location = new Point(341, 211);
+            PLAYER_PIC.Location = new Point(350, 211);
             PLAYER_PIC.Name = "PLAYER_PIC";
             PLAYER_PIC.Size = new Size(99, 99);
             PLAYER_PIC.SizeMode = PictureBoxSizeMode.Zoom;
@@ -100,42 +104,62 @@
             // lblCPUchoice
             // 
             lblCPUchoice.AutoSize = true;
-            lblCPUchoice.Font = new Font("Segoe UI Semibold", 12.3076925F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCPUchoice.Font = new Font("Segoe UI Semibold", 12.3076925F, FontStyle.Bold);
             lblCPUchoice.Location = new Point(289, 9);
             lblCPUchoice.Name = "lblCPUchoice";
-            lblCPUchoice.Size = new Size(198, 28);
+            lblCPUchoice.Size = new Size(209, 30);
             lblCPUchoice.TabIndex = 5;
             lblCPUchoice.Text = "Jugada de la Compu";
             // 
             // lblPlayerchoice
             // 
             lblPlayerchoice.AutoSize = true;
-            lblPlayerchoice.Font = new Font("Segoe UI Semibold", 12.3076925F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPlayerchoice.Font = new Font("Segoe UI Semibold", 12.3076925F, FontStyle.Bold);
             lblPlayerchoice.Location = new Point(289, 324);
             lblPlayerchoice.Name = "lblPlayerchoice";
-            lblPlayerchoice.Size = new Size(195, 28);
+            lblPlayerchoice.Size = new Size(204, 30);
             lblPlayerchoice.TabIndex = 6;
             lblPlayerchoice.Text = "Jugada del Humano";
             // 
             // lblPlayerresult
             // 
             lblPlayerresult.AutoSize = true;
-            lblPlayerresult.Font = new Font("Segoe UI Semibold", 9.846154F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPlayerresult.Location = new Point(29, 211);
+            lblPlayerresult.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblPlayerresult.Location = new Point(40, 156);
             lblPlayerresult.Name = "lblPlayerresult";
-            lblPlayerresult.Size = new Size(183, 21);
+            lblPlayerresult.Size = new Size(194, 23);
             lblPlayerresult.TabIndex = 7;
             lblPlayerresult.Text = "Resultados del Humano";
             // 
             // lblCPUresult
             // 
             lblCPUresult.AutoSize = true;
-            lblCPUresult.Font = new Font("Segoe UI Semibold", 9.846154F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCPUresult.Location = new Point(544, 211);
+            lblCPUresult.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblCPUresult.Location = new Point(583, 211);
             lblCPUresult.Name = "lblCPUresult";
-            lblCPUresult.Size = new Size(186, 21);
+            lblCPUresult.Size = new Size(197, 23);
             lblCPUresult.TabIndex = 8;
             lblCPUresult.Text = "Resultados de la Compu";
+            // 
+            // CPU_CARA
+            // 
+            CPU_CARA.BackColor = Color.Transparent;
+            CPU_CARA.Location = new Point(583, 53);
+            CPU_CARA.Name = "CPU_CARA";
+            CPU_CARA.Size = new Size(152, 143);
+            CPU_CARA.SizeMode = PictureBoxSizeMode.Zoom;
+            CPU_CARA.TabIndex = 9;
+            CPU_CARA.TabStop = false;
+            // 
+            // HUM_CARA
+            // 
+            HUM_CARA.BackColor = Color.Transparent;
+            HUM_CARA.Location = new Point(81, 211);
+            HUM_CARA.Name = "HUM_CARA";
+            HUM_CARA.Size = new Size(152, 143);
+            HUM_CARA.SizeMode = PictureBoxSizeMode.Zoom;
+            HUM_CARA.TabIndex = 10;
+            HUM_CARA.TabStop = false;
             // 
             // Form1
             // 
@@ -143,6 +167,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(800, 450);
+            Controls.Add(HUM_CARA);
+            Controls.Add(CPU_CARA);
             Controls.Add(lblCPUresult);
             Controls.Add(lblPlayerresult);
             Controls.Add(lblPlayerchoice);
@@ -156,6 +182,8 @@
             Text = "PIEDRA PAPEL o TIJERA";
             ((System.ComponentModel.ISupportInitialize)CPU_PIC).EndInit();
             ((System.ComponentModel.ISupportInitialize)PLAYER_PIC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CPU_CARA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HUM_CARA).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,5 +199,7 @@
         private Label lblPlayerchoice;
         private Label lblPlayerresult;
         private Label lblCPUresult;
+        private PictureBox CPU_CARA;
+        private PictureBox HUM_CARA;
     }
 }

@@ -16,6 +16,9 @@ namespace piedra_papel_tijera
         string playerChoice;
         string computerChoice;
         string[] Options = { "R", "P", "S", "R", "P", "S", "R", "P", "S" };
+        //modo facil mas chance de ganar con piedra
+        string[] Facil = { "R", "P", "S", "R", "S", "R", "S" };
+
         Random random = new Random();
         int computerScore;
         int playerScore;
@@ -27,12 +30,16 @@ namespace piedra_papel_tijera
             InitializeComponent();
         }
 
+
+
         private void MakeChoiceEvent(object sender, EventArgs e)
         {
             Button tempButton = sender as Button;
             playerChoice = (string)tempButton.Tag;
-            int i = random.Next(0, Options.Length);
-            computerChoice = Options[i];
+            //int i = random.Next(0, Options.Length);
+            //computerChoice = Options[i];
+            int i = random.Next(0, Facil.Length);
+            computerChoice = Facil[i];
             lblPlayerchoice.Text = "Humano juega: " + UpdateTextandImage(playerChoice, PLAYER_PIC);
             lblCPUchoice.Text = "Compu juega: " + UpdateTextandImage(computerChoice, CPU_PIC);
             CheckGame();
@@ -62,10 +69,17 @@ namespace piedra_papel_tijera
 
         private void CheckGame()
         {
+            PictureBox pic = CPU_CARA;
+            PictureBox pih = HUM_CARA;
+
             //si es empate
             if (computerChoice == playerChoice)
             {
-                draw = " Empate";
+                draw = "- Empate -";
+                //poner carita
+                pic.Image = Properties.Resources.maria;
+                pih.Image = Properties.Resources.humempata;
+
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine + draw;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine + draw;
             }
@@ -74,6 +88,10 @@ namespace piedra_papel_tijera
             {
                 computerScore++;
                 draw = "* Punto para Compu";
+                //poner carita
+                pic.Image = Properties.Resources.mariagana;
+                pih.Image = Properties.Resources.humpierde;
+
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine + draw;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine ;
 
@@ -83,6 +101,10 @@ namespace piedra_papel_tijera
             {
                 playerScore++;
                 draw = "* Punto para Humano";
+                //poner carita
+                pic.Image = Properties.Resources.mariapierde;
+                pih.Image = Properties.Resources.humgana;
+
                 lblCPUresult.Text = "Puntos Compu: " + computerScore + Environment.NewLine ;
                 lblPlayerresult.Text = "Puntos Humano: " + playerScore + Environment.NewLine + draw;
 
